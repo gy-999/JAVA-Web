@@ -10,6 +10,12 @@
     <name>javaweb-aggregator</name>
     <description>黑马 JavaWeb 课程多模块聚合工程（对照学习用）</description>
     <modules>
-        <!-- 后续 Task 逐个追加 Maven 子工程 -->
+        <module>day04-maven-springboot/maven-project01</module>
+        <module>day04-maven-springboot/maven-project02</module>
+        <module>day04-maven-springboot/maven-projectA</module>
+        <module>day04-maven-springboot/maven-projectB</module>
+        <module>day04-maven-springboot/maven-projectC</module>
+        <module>day04-maven-springboot/http-server-demo</module>
+        <module>day04-maven-springboot/springboot-web-quickstart</module>
     </modules>
 </project>
