@@ -17,5 +17,6 @@
         <module>day04-maven-springboot/maven-projectC</module>
         <module>day04-maven-springboot/http-server-demo</module>
         <module>day04-maven-springboot/springboot-web-quickstart</module>
+        <module>day05-req-resp/04-IOC详解/springboot-web-req-resp</module>
     </modules>
 </project>
