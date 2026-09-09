@@ -20,5 +20,8 @@
         <module>day05-req-resp/04-IOC详解/springboot-web-req-resp</module>
         <module>day08-mybatis/springboot-mybatis-quickstart</module>
         <module>day09-mybatis/springboot-mybatis-crud</module>
+        <module>tlias-final/tlias-pojo</module>
+        <module>tlias-final/tlias-utils</module>
+        <module>tlias-final/tlias-web-management</module>
     </modules>
 </project>
