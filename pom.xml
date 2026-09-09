@@ -23,5 +23,6 @@
         <module>tlias-final/tlias-pojo</module>
         <module>tlias-final/tlias-utils</module>
         <module>tlias-final/tlias-web-management</module>
+        <module>day13-aop/springboot-aop-quickstart</module>
     </modules>
 </project>
