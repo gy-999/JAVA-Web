@@ -18,5 +18,7 @@
         <module>day04-maven-springboot/http-server-demo</module>
         <module>day04-maven-springboot/springboot-web-quickstart</module>
         <module>day05-req-resp/04-IOC详解/springboot-web-req-resp</module>
+        <module>day08-mybatis/springboot-mybatis-quickstart</module>
+        <module>day09-mybatis/springboot-mybatis-crud</module>
     </modules>
 </project>
