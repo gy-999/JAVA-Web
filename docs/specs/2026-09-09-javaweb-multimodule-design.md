@@ -99,10 +99,24 @@ D:\javaproject\javaweb\
 - `day14-springboot-principle/02-bean管理/springboot-web-config2`
 - `day14-springboot-principle/03-自定义starter/aliyun-oss-spring-boot-autoconfigure`
 - `day14-springboot-principle/03-自定义starter/aliyun-oss-spring-boot-starter`
-- `day15-maven-advanced/02-继承与聚合` 下的子工程（实现时核对）
-- `day15-maven-advanced/03-私服操作` 下的子工程（实现时核对）
+- `day15-maven-advanced/02-inheritance-aggregation` 与 `03-nexus`：**不**进根聚合器 `<modules>`，作为独立 reactor 各自含 `tlias-parent`+3 子模块，IDEA 单独打开（见 §2.2）
 
-> day05 的 4 个 zip 解压后顶层目录名都叫 `springboot-web-req-resp`，会落在各自带编号的父目录下避免冲突。day15 的 zip 内层目录可能含中文前缀（如 `01. 多模块开发/`），解压后按主题重命名为干净的模块目录。
+> day05 的 4 个 zip 解压后顶层目录名都叫 `springboot-web-req-resp`，会落在各自带编号的父目录下避免冲突。
+>
+> day15 的三个 zip 是**三种不同**的 maven 高级演示，内层都带中文前缀目录（`01. 多模块开发/`、`02. 继承与聚合/`、`03. 私服操作/`），解压后按主题重命名为 Maven 合规目录名：
+> - `01. 多模块开发/` → 3 模块 `tlias-pojo`/`tlias-utils`/`tlias-web-management`（**并入 `tlias-final/`**，是最终版 tlias）。
+> - `02. 继承与聚合/` → 4 模块 `tlias-parent`（父 pom，packaging=pom）+ `tlias-pojo`/`tlias-utils`/`tlias-web-management`（继承 parent）。重命名目录为 `day15-maven-advanced/02-inheritance-aggregation/`。
+> - `03. 私服操作/` → 同 02 结构（`tlias-parent` + 3 子模块），是 02 加了私服 `<distributionManagement>` 的版本。重命名为 `day15-maven-advanced/03-nexus/`。
+>
+> 注意 02 与 03 的 `tlias-pojo`/`tlias-utils`/`tlias-web-management` 与 `tlias-final/` 同名同包，但落在不同目录、不同聚合器下，互不冲突（Maven 以目录隔离）。聚合器根只把**外层主题目录**的 reactor 作为 module 引用，避免子模块名重复注册。
+
+### 2.2 各 day15 子工程的 module 引用方式
+
+day15 的 02/03 各自是完整的 4 模块 reactor（含 `tlias-parent` 父 pom）。在根聚合器里**不**逐个列 02/03 的子模块（会与 `tlias-final` 同名冲突），而是只列外层主题目录中的一个代表 pom，或干脆让 02/03 作为**独立 reactor**不进根聚合（用 IDEA 各自打开）。实现时二选一（见 §5 批 4，倾向「02/03 独立、不进根聚合」以避免同名冲突）。
+
+## 2.3 day14/01 实际源码
+
+`springboot-web-config`（day14/01）源码极少：仅 `SpringbootWebConfigApplication.java` + 一个空 test 类，配置演示靠 `application.yml`/`1.xml` 等资源。仍作为独立 Maven 模块纳入。`springboot-web-config2`（day14/02）才有完整的 controller/service/mapper 层。
 
 ## 3. 类命名 / 内容约定
 
