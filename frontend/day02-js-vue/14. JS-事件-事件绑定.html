@@ -12,11 +12,16 @@
     <input type="button" id="btn2" value="事件绑定2">
 </body>
 
+
+
 <script>
+        //方法一
     function on(){
         alert("按钮1被点击了...");
     }
+    //`onclick` 是 HTML 的**点击事件属性**，作用：当用户点击这个元素的时候，执行一段 JS 代码。
 
+        //方法二
     document.getElementById('btn2').onclick = function(){
         alert("按钮2被点击了...");
     }
