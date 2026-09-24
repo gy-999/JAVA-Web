@@ -11,18 +11,21 @@
     <div id="app">
 
         <input type="button" value="点我一下" v-on:click="handle()">
-
+<!--        v-on: 可以替换成@，-->
         <input type="button" value="点我一下" @click="handle()">
 
     </div>
 </body>
 <script>
+    // v-on语法给标签的事件绑定的函数，必须是vue对象种声明的函数
+    // v-on语法绑定事件时，事件名相比较js中的事件名，没有on
     //定义Vue对象
     new Vue({
         el: "#app", //vue接管区域
         data:{
            
         },
+        // handle  处理点击事件
         methods: {
             handle: function(){
                 alert("你点我了一下...");
