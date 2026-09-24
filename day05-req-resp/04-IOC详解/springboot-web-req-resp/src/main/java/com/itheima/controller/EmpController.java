@@ -23,7 +23,7 @@ public class EmpController {
 //    @Qualifier("empServiceA")
 //    private EmpService empService ;
 
-//    @Resource(name = "empServiceB"):是按照bean的名称进行注入。通过name属性指定要注入的bean的名称
+//    @Resource(name = "empServiceB"):是按照bean的名称进行注入。通过name属性指定要注入的bean的名称。
 
     @Resource(name = "empServiceB")
     private EmpService empService ;
