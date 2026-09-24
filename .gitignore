@@ -11,3 +11,14 @@ target/
 # OS
 Thumbs.db
 .DS_Store
+
+# Node / 前端依赖与构建产物
+node_modules/
+dist/
+package-lock.json.bak
+
+# 编辑器
+.vscode/
+
+# 其他本地工具目录
+.superpowers/
