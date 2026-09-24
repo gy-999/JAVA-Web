@@ -44,5 +44,8 @@
             console.log(result.data);
         })
     }
+    // 将 then()中传递的匿名函数称为回调函数，意思是该匿名函数在发送请求时不会被调用，而是在成功响应后调用的函数。而该回调函数中的 resp 参数
+    // 是对响应的数据进行封装的对象，通过 resp.data 可以获取到响应的数据
+    // then()上函数里面的result是形参   result => {}   =   (result) => {} =   function(result) {}
 </script>
 </html>

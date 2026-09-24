@@ -24,6 +24,8 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
+<!--            测试有效-->
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

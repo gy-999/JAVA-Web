@@ -11,13 +11,18 @@
     <div id="app">
 
         <a v-bind:href="url">链接1</a>
-        <a :href="url">链接2</a>
+        <a :href="ur">链接2</a>
 
         <input type="text" v-model="url">
 
     </div>
 </body>
 <script>
+
+    //  v-bind 为HTML标签绑定属性值，如设置 href , css样式等
+    // css  设置样式
+    // href 设置链接地址
+    //  v-model 在表单元素上创建双向数据绑定
     //定义Vue对象
     new Vue({
         el: "#app", //vue接管区域

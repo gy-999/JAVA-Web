@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//@Primary
+//@Primary  当存在多个相同类型的Bean注入时，加上@Primary注解，来确定默认的实现。让当前bean生效
 //@Component //将当前类交给IOC容器管理, 成为IOC容器中的bean
 @Service
 public class EmpServiceA implements EmpService {

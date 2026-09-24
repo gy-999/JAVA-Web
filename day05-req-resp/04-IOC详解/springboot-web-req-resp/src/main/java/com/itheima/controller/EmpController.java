@@ -16,9 +16,14 @@ import java.util.List;
 @RestController
 public class EmpController {
 
+//    @Qualifier("empServiceA")指定当前要注入的bean对象。 在@Qualifier的value属性中，指定注入的bean的名称。
+//    @Qualifier("empServiceA")不能单独使用，必须配合@Autowired使用
+
+//    @Autowired //运行时, IOC容器会提供该类型的bean对象,并赋值给该变量 - 依赖注入,按照类型注入
 //    @Qualifier("empServiceA")
-//    @Autowired //运行时, IOC容器会提供该类型的bean对象,并赋值给该变量 - 依赖注入
 //    private EmpService empService ;
+
+//    @Resource(name = "empServiceB"):是按照bean的名称进行注入。通过name属性指定要注入的bean的名称。
 
     @Resource(name = "empServiceB")
     private EmpService empService ;
